@@ -6,7 +6,7 @@
 /*   By: scao <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:02:28 by scao              #+#    #+#             */
-/*   Updated: 2018/11/12 19:24:41 by scao             ###   ########.fr       */
+/*   Updated: 2019/01/03 14:39:20 by scao             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	unsigned int	i;
 
 	i = 0;
+	if (!s || !f)
+		return ;
 	while (s[i] != '\0')
 	{
 		f(i, s + i);

@@ -6,7 +6,7 @@
 /*   By: scao <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:10:18 by scao              #+#    #+#             */
-/*   Updated: 2018/11/12 19:26:23 by scao             ###   ########.fr       */
+/*   Updated: 2019/01/03 14:50:59 by scao             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char			*str;
 
 	i = 0;
+	if (!s || !f)
+		return (NULL);
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
 	if (str == NULL)
 		return (NULL);
